@@ -21,6 +21,10 @@ if(isset($_GET['search'])){
     $searchName=$db->prepare("select * from client 
          where nom like ? or 
          prenom like ?");
+    $valeur="%".$_GET['search']."%";
+    $searchName->bindParam(1,$valeur);
+    $searchName->bindParam(2,$valeur);
+    $searchName->execute();
 }
 else $searchName=$db->query("select * from client");
 
