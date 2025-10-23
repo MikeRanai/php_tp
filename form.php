@@ -16,7 +16,7 @@ if(isset($POST["marque"])){
     $voiture = new Voiture($marque, $modele, $vitesse);
     $voitures[] = $voiture;
     $_SESSION["voitures"] = $voitures;
-
+    var_dump($voiture);
     foreach ($voitures as $voiture){
         var_dump($voiture);
     }

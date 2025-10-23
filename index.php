@@ -22,3 +22,5 @@ foreach ($voitures as $voiture) {
     $voiture->setVitesse($voiture->getVitesse()+1);
     $voiture->avancer();
 }
+
+phpinfo();
